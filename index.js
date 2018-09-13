@@ -41,12 +41,17 @@ app.post("/getStatus",function(req,res){
                     eventArray.push([date,status,location])
                 }
             var thedata={
-                Events:eventArray}
+                Events:eventArray
+            }
                 res.render("home",{data:thedata})   
+        }else{
+            console.log("either error or status code not 200")
         }
     }else{
     console.log("their was error"+ error)
     }
+})
+})
 
 
 
